@@ -10,4 +10,4 @@ for i in range(len(arr)):
 
 sum_ans = sum(ans)
 avg_ans = sum_ans / len(ans)
-print(sum_ans, avg_ans)
+print(f"{sum_ans} {avg_ans:.1f}")
