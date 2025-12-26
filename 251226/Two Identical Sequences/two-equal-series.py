@@ -5,7 +5,7 @@ B = list(map(int, input().split()))
 # Please write your code here.
 A.sort()
 B.sort()
-
+'''
 def find(A,B):
     cnt_arr = []
     for i in range(n):
@@ -17,5 +17,8 @@ def find(A,B):
         return "Yes"
     else:
         return "No"
+'''
+def find(A,B):
+    return "Yes" if A == B else "No"
 res = find(A,B)
 print(res)
