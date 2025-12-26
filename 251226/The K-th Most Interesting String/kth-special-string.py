@@ -17,6 +17,7 @@ def sort_arr(arr):
 
 str = find_str(str)
 str = sort_arr(str)
-res = str[k-1]
+print(*str)
+res = str[k]
 
 print(res)
