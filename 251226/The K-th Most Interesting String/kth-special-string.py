@@ -5,9 +5,9 @@ str = [input() for _ in range(n)]
 # Please write your code here.
 def find_str(str):
     arr = []
-    for i in range(n):
-        if t in str[i]:
-            arr.append(str[i])
+    for i in str:
+        if i.startswith(t):
+            arr.append(i)
 
     return arr
 
@@ -17,6 +17,6 @@ def sort_arr(arr):
 
 str = find_str(str)
 str = sort_arr(str)
-res = str[k]
+res = str[k-1]
 
 print(res)
