@@ -1,6 +1,7 @@
-binary = input()
+
 
 # Please write your code here.
+'''
 def make_into_digits(binary):
     binary = binary[::-1]
     digits = 0
@@ -9,3 +10,5 @@ def make_into_digits(binary):
     return digits
 
 print(make_into_digits(binary))
+'''
+print(int(input(), 2))
