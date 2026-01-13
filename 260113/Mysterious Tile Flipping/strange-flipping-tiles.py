@@ -1,20 +1,33 @@
 n = int(input())
-commands = [tuple(input().split()) for _ in range(n)]
-MAX_CARD = 100000
-# Please write your code here.
-cards = [-1] * MAX_CARD
+commands = [input().split() for _ in range(n)]
+
+MAX_MOVE = n * 100
+OFFSET = MAX_MOVE
+SIZE = 2 * MAX_MOVE + 1
+
+tiles = [-1] * SIZE   
 
 pos = 0
-nxt_pos = 0
-for num, direction in commands:
-    if direction == "R":
-        nxt_pos = pos + int(num)
-        for i in range(pos,nxt_pos):
-            cards[i] = 1
-    else:
-        nxt_pos = pos - int(num)
-        for i in range(nxt_pos,pos):
-            cards[i] = 0
-    pos = nxt_pos
 
-print(sum(1 for i in cards if i == 0), sum(1 for i in cards if i == 1))
+for x, d in commands:
+    x = int(x)
+
+    if d == 'R':
+        l, r = pos, pos + x
+        color = 1
+        pos += x
+    else:
+        l, r = pos - x, pos
+        color = 0
+        pos -= x
+
+    l += OFFSET
+    r += OFFSET
+
+    for i in range(l, r):
+        tiles[i] = color
+
+white = sum(1 for t in tiles if t == 0)
+black = sum(1 for t in tiles if t == 1)
+
+print(white, black)
