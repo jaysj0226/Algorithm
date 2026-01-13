@@ -4,7 +4,7 @@ MAX_NUM = 1000
 # Please write your code here.
 def lines(arr,segment):
     first, last = segment
-    for i in range(first,last+1):
+    for i in range(first,last):
         arr[i] += 1
 
 def simulation():
