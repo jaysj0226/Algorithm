@@ -12,7 +12,6 @@ for num, direction in commands:
         for i in range(pos,nxt_pos):
             cards[i] = 1
     else:
-$0
         nxt_pos = pos - int(num)
         for i in range(nxt_pos,pos):
             cards[i] = 0
