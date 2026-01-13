@@ -5,21 +5,20 @@ MAX_MOVE = n * 100
 OFFSET = MAX_MOVE
 SIZE = 2 * MAX_MOVE + 1
 
-tiles = [-1] * SIZE   
-
+tiles = [-1] * SIZE
 pos = 0
 
 for x, d in commands:
     x = int(x)
 
     if d == 'R':
-        l, r = pos, pos + x
+        l, r = pos, pos + x          
         color = 1
-        pos += x
+        pos = pos + x - 1            
     else:
-        l, r = pos - x, pos
+        l, r = pos - x + 1, pos + 1  
         color = 0
-        pos -= x
+        pos = pos - x + 1            
 
     l += OFFSET
     r += OFFSET
