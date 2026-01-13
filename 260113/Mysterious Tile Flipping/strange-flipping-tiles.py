@@ -1,6 +1,6 @@
 n = int(input())
 commands = [tuple(input().split()) for _ in range(n)]
-MAX_CARD = 10000
+MAX_CARD = 1000000
 # Please write your code here.
 cards = [-1] * MAX_CARD
 
@@ -12,6 +12,7 @@ for num, direction in commands:
         for i in range(pos,nxt_pos):
             cards[i] = 1
     else:
+$0
         nxt_pos = pos - int(num)
         for i in range(nxt_pos,pos):
             cards[i] = 0
