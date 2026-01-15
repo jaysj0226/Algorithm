@@ -5,8 +5,10 @@ arr = [int(input()) for _ in range(n)]
 def simulation():
     best = 0
     cnt = 0
-    for i in range(n-1):
-        if arr[i] != arr[i+1]:
+    for i in range(n):
+        if i == 0:
+            best = 1
+        if arr[i] != arr[i-1]:
             best = max(best,cnt)
             cnt = 0
         cnt += 1
