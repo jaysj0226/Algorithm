@@ -6,12 +6,10 @@ def simulation():
     best = 0
     cnt = 0
     for i in range(n):
-        if i == 0:
-            best = 1
-        if arr[i] != arr[i-1]:
-            best = max(best,cnt)
+        if i==0 or arr[i] != arr[i-1]:
             cnt = 0
         cnt += 1
+        best = max(best,cnt)
 
     print(best)
 
