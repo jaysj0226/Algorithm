@@ -27,10 +27,10 @@ def bounding_area_for_first():
         for y in range(MAX_R + 1):
             if blocks[x][y] == 1:
                 exist = True
-                if x < min_x: min_x = x
-                if x > max_x: max_x = x
-                if y < min_y: min_y = y
-                if y > max_y: max_y = y
+                min_x = min(min_x,x)
+                max_x = max(max_x,x)
+                min_y = min(min_y,y)
+                max_y = max(max_y,y)
 
     if not exist:
         return 0
